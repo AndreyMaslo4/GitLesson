@@ -1,5 +1,5 @@
 # QA Матеріали з минулих занять
 
-1. [Чек-ліст](MyWork/checklist.txt)
-2. [Тест-кейси](MyWork/testcases.md)
-3. [Баг-репорт](MyWork/bugs.txt)
+1. [Чек-ліст для Дія](MyWork/checklist_diya.pdf)
+2. [Тест-кейс для МоноБанк](MyWork/testcase_monobank.pdf)
+3. [Баг-репорт для ветклініки](MyWork/bugreport_vetclinic.pdf)
