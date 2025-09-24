@@ -1,0 +1,465 @@
+{
+  "id": "53aaf045-cc61-4e99-94b6-b00f3e4c822a",
+  "version": "2.0",
+  "name": "AutoRia_Tests",
+  "url": "https://auto.ria.com/",
+  "tests": [{
+    "id": "9c5e1557-efc3-4f7e-803e-7b60fb12282d",
+    "name": "Search_By_Brand",
+    "commands": [{
+      "id": "882e0441-fbae-43e6-b60b-6e79ed5754a9",
+      "comment": "Відкриваємо сайт",
+      "command": "open",
+      "target": "https://auto.ria.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c201cb3b-90e0-4f4b-8196-3f1c21abdd48",
+      "comment": "Вибираємо марку автомобіля",
+      "command": "store",
+      "target": "BMW",
+      "targets": [],
+      "value": "carBrand"
+    }, {
+      "id": "4e725b9d-43a8-4ea6-be80-b175d0af6938",
+      "comment": "Вводимо назву марки в поле",
+      "command": "type",
+      "target": "css=#brandTooltipBrandAutocompleteInput-brand",
+      "targets": [],
+      "value": "BMW"
+    }, {
+      "id": "a6c96b7f-4d44-4495-936a-51715bb588bd",
+      "comment": "Клік по пункту BMW зі списку",
+      "command": "click",
+      "target": "xpath=//a[@data-value='9']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9a8118c-f263-484d-90ae-8cd1a0ad0536",
+      "comment": "Вводимо назву моделі в поле",
+      "command": "type",
+      "target": "css=#brandTooltipBrandAutocompleteInput-model",
+      "targets": [],
+      "value": "X7"
+    }, {
+      "id": "ea315444-9a9e-40cf-94f5-869c6aa284ab",
+      "comment": "Клік по моделі Х7",
+      "command": "click",
+      "target": "xpath=//a[@data-value='49169']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bde84bef-bd9d-4406-9a6a-537289463ae6",
+      "comment": "Вводимо назву регіона в поле",
+      "command": "type",
+      "target": "css=#brandTooltipBrandAutocompleteInput-region",
+      "targets": [],
+      "value": "Харків"
+    }, {
+      "id": "c8d95d67-c256-4d6e-81e2-2c03e0bb522c",
+      "comment": "Вибір року випуску",
+      "command": "click",
+      "target": "id=forYear",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af607d99-f106-474a-a740-16bd66f5e5d0",
+      "comment": "Вибір року випуску від 2020",
+      "command": "select",
+      "target": "id=yearFrom",
+      "targets": [],
+      "value": "label=2020"
+    }, {
+      "id": "5dff2d5d-e86c-4b4f-8205-0173debdecbf",
+      "comment": "Натисни пошук",
+      "command": "click",
+      "target": "css=button[type='submit']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "55ede148-ba67-4ea2-8d88-edd65c5829eb",
+    "name": "Filter_By_Price",
+    "commands": [{
+      "id": "1e5ea7b4-d042-4c63-8249-426b9c5c167b",
+      "comment": "",
+      "command": "open",
+      "target": "https://auto.ria.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2228626-add6-440f-905f-cf902012fd3d",
+      "comment": "Вибір ціни",
+      "command": "click",
+      "target": "id=forPrice",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d21bd16c-e029-41eb-ac60-4a1bdb83fcfa",
+      "comment": "",
+      "command": "type",
+      "target": "id=priceFrom",
+      "targets": [],
+      "value": "50000"
+    }, {
+      "id": "65beacc5-5fb4-489b-aa8a-4c086e9f8529",
+      "comment": "",
+      "command": "type",
+      "target": "id=priceTo",
+      "targets": [],
+      "value": "150000"
+    }, {
+      "id": "75591577-2195-45fa-bed5-7af20f71c0dc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(@class,'checked_ad') and contains(text(),'Перевірений VIN')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27923ed4-8e5d-4721-b0ab-0c54f4ac9c69",
+      "comment": "Розширений пошук",
+      "command": "click",
+      "target": "css=.ext-end > span",
+      "targets": [
+        ["css=.ext-end > span", "css:finder"],
+        ["xpath=//form[@id='mainSearchForm']/div[3]/a/span", "xpath:idRelative"],
+        ["xpath=//div[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Розширений пошук')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b7376f9-56df-4b42-a2b4-d1aed2f7f7b7",
+      "comment": "Ціна з ПДВ",
+      "command": "click",
+      "target": "xpath=//label[@for='pdv']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9abfb5a6-fe4b-4c64-8a5a-fc84e72be683",
+      "comment": "Можливий торг",
+      "command": "click",
+      "target": "xpath=//label[@for='auction']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4f9106e-1775-414e-a922-e5a75edddd6c",
+      "comment": "Можлива оплата частинами",
+      "command": "click",
+      "target": "xpath=//label[@for='installment']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89cf3b20-eb5e-45a0-9fac-c3de8fe0397e",
+      "comment": "Натиснути пошук",
+      "command": "click",
+      "target": "css=button.button.small",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "76716216-efcc-475d-a3d7-a4785f28919d",
+    "name": "Filter_All_For_Auto",
+    "commands": [{
+      "id": "b0c639c5-f884-488b-92b4-793777eb0209",
+      "comment": "Головна сторінка",
+      "command": "open",
+      "target": "https://auto.ria.com/uk/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd0dea97-443c-490d-b02f-e32790c2c9ba",
+      "comment": "Перевіряє наявність Все для авто",
+      "command": "assertElementPresent",
+      "target": "css=#AllForAuto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b63ccb3c-2a40-4b62-b29f-ec7d84564f02",
+      "comment": "Зберігає текст кнопки",
+      "command": "storeText",
+      "target": "css=#AllForAuto",
+      "targets": [],
+      "value": "autoTabText"
+    }, {
+      "id": "1a6eb54e-c995-4461-b293-9dda7718c369",
+      "comment": "Перевіряє текст",
+      "command": "assertText",
+      "target": "css=#AllForAuto",
+      "targets": [],
+      "value": "Все для авто"
+    }, {
+      "id": "886bc4d9-0932-4c9d-b0be-c5f23ce67f14",
+      "comment": "Переходить у розділ",
+      "command": "click",
+      "target": "css=#AllForAuto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aa5e64d-b886-474c-9c6b-24bbbf54c5b8",
+      "comment": "Відкрити новини",
+      "command": "open",
+      "target": "xpath=//a[contains(text(),'Новини')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e23796c-dcbd-42c7-86c6-28868e54ee86",
+      "comment": "Повернись на головну сторінку",
+      "command": "click",
+      "target": "linkText=головну сторінку AUTO.RIA",
+      "targets": [
+        ["linkText=головну сторінку AUTO.RIA", "linkText"],
+        ["css=p:nth-child(8) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'головну сторінку AUTO.RIA')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'головну сторінку AUTO.RIA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f16ea66-1f86-4cdd-9865-12b0d6d19d22",
+      "comment": "Натисни на логотип BMW",
+      "command": "click",
+      "target": "css=svg[aria-label='BMW']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c045732f-9e99-4e85-b67a-c51f975ebc2d",
+      "comment": "Переходимо на сторінку №2",
+      "command": "click",
+      "target": "css=a.page-link[href*=\"?page=2\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bfdee57-e2bd-4af0-8559-569127aace2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a.address[title*=\"BMW X5 2020\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a868211c-e5bd-44a6-9067-993b7c8dc503",
+      "comment": "Додати до обраного",
+      "command": "click",
+      "target": "css=a#addToBookmarks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6188de8-a9e2-45d3-b5e9-ae65ea7172b3",
+      "comment": "Обране",
+      "command": "click",
+      "target": "css=a#headerBookmarksLink",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cc42f047-dc1f-4049-889a-868f421e85d0",
+    "name": "Check_title_text Sell Auto",
+    "commands": [{
+      "id": "8f5ddce3-86cc-4de8-a9fa-3c59b5936d7b",
+      "comment": "Відкриває головну сторінку",
+      "command": "open",
+      "target": "https://auto.ria.com/uk/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0995bfe-13d3-4dd1-983a-66d37c657052",
+      "comment": "Очікуваний результат",
+      "command": "store",
+      "target": "Продати авто",
+      "targets": [],
+      "value": "expectedText"
+    }, {
+      "id": "d5ef4aac-cbf1-47e7-8300-d006f8c6189c",
+      "comment": "Перевіряє наявність кнопки",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='button-add' and contains(text(),'Продати авто')]",
+      "targets": [],
+      "value": "${expectedText}"
+    }, {
+      "id": "843efdcd-5e10-4f28-b475-640ede0b8b57",
+      "comment": "Перевіряє текст кнопки",
+      "command": "assertText",
+      "target": "xpath=//a[@class='button-add' and contains(text(),'Продати авто')]",
+      "targets": [],
+      "value": "${expectedText}"
+    }, {
+      "id": "ef94333d-43c3-4c50-9775-6e82cd2e0f62",
+      "comment": "Клік на кнопку",
+      "command": "click",
+      "target": "css=a.button-add",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d039dac-eda3-40d0-ac01-2bd30d263c54",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "6583c69f-b758-488a-bffe-e3f85cf6fee1",
+      "comment": "Перевірка елементів на сторінкі",
+      "command": "open",
+      "target": "https://auto.ria.com/uk/add_auto.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cf2ab08-8bdc-4fca-a8ac-ef6cbad661b2",
+      "comment": "Як фотографувати автомобіль",
+      "command": "verifyElementPresent",
+      "target": "css=span.link-dotted",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d783968-2a88-49e0-af3b-ca21f46244ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=span.link-dotted",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "b74e085a-9a47-4e27-a4ff-44e43a79e3c0",
+      "comment": "Додати фото",
+      "command": "verifyElementPresent",
+      "target": "css=button#addPhoto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a00975ef-55e5-4bb5-a10b-33fb240f332f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a.close.js-closePopupHowAddPhoto",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3d6aec4a-1c94-476a-91f7-3f941634dd27",
+    "name": "Car reviews 4 steps",
+    "commands": [{
+      "id": "0d215dd0-1573-45e4-a448-3dc3677bfa0f",
+      "comment": "",
+      "command": "open",
+      "target": "https://auto.ria.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "199cd742-abb7-4d15-8ee4-0b43bb7751ca",
+      "comment": "Наявність відгуків",
+      "command": "storeAttribute",
+      "target": "css=a.elevated.sl@href",
+      "targets": [],
+      "value": "відгуківHref"
+    }, {
+      "id": "b0f06641-f7d9-44a8-81f0-1913257581bd",
+      "comment": "Натисни Відгуки про автомобілі",
+      "command": "click",
+      "target": "css=a.elevated.sl",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2050220c-ccc6-4e34-b9b2-01d1c905d75c",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3b81f7e8-addf-4ce4-9622-bc680849f557",
+    "name": "Login to your Personal Account",
+    "commands": [{
+      "id": "a5f3c31a-7ece-493c-9612-4c1fab3dad68",
+      "comment": "",
+      "command": "open",
+      "target": "https://auto.ria.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ab3d60c-f71a-4e75-81ea-29550c9fbe80",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=a.ghost[aria-label=\"Особистий кабінет\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "0e8b7921-24d6-482e-8121-9d292e2f37bd",
+      "comment": "Наявність особистого кабінету",
+      "command": "storeAttribute",
+      "target": "css=a.ghost[aria-label=\"Особистий кабінет\"]@href",
+      "targets": [],
+      "value": "cabinetHref"
+    }, {
+      "id": "2b5fe323-3c76-4b36-b294-db86e8165fda",
+      "comment": "Ввійди в особистий кабінет",
+      "command": "click",
+      "target": "css=a.ghost[aria-label=\"Особистий кабінет\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "879046c2-d812-45f1-a119-fdbf20e36153",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "7f6c2ef8-c85c-4ee4-ad7f-3cf8791991d8",
+      "comment": "Наявність сповіщень",
+      "command": "waitForElementPresent",
+      "target": "id=svg-notification-use",
+      "targets": [
+        ["id=svg-notification-use", "id"],
+        ["css=#svg-notification-use", "css:finder"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "cacec75b-6ff8-40ec-8cb4-74c88acf24a9",
+      "comment": "Перевірити сповіщення",
+      "command": "click",
+      "target": "linkText=Сповіщення",
+      "targets": [
+        ["linkText=Сповіщення", "linkText"],
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Сповіщення')]", "xpath:link"],
+        ["xpath=//nav[@id='open']/div[6]/label/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/uk/cabinet/notifications')])[2]", "xpath:href"],
+        ["xpath=//label/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Сповіщення')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "54b5efa0-a2cb-4b11-b518-244f4578a4fd",
+      "comment": "Натисни Мої оголошення",
+      "command": "click",
+      "target": "css=div:nth-child(4) .wrap:nth-child(2)",
+      "targets": [
+        ["css=div:nth-child(4) .wrap:nth-child(2)", "css:finder"],
+        ["xpath=//nav[@id='open']/div[2]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//nav/div[2]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Мої оголошення')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "850cd7f4-e551-4133-aa79-bd2679c306bb",
+      "comment": "Натисни налаштування",
+      "command": "click",
+      "target": "css=.item:nth-child(19) > .wrap:nth-child(1)",
+      "targets": [
+        ["css=.item:nth-child(19) > .wrap:nth-child(1)", "css:finder"],
+        ["xpath=//nav[@id='open']/a[3]/span", "xpath:idRelative"],
+        ["xpath=//nav/a[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1b24d66d-7bf0-4738-ad29-8623d95f8b00",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://auto.ria.com/"],
+  "plugins": []
+}
